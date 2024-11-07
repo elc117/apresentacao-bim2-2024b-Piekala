@@ -195,6 +195,16 @@ public class Player {
 }
 ```
 
+### Rodando o código:
+
+![Texto alternativo](/database/code/menu.png)
+![Texto alternativo](/database/code/knife_select.png)
+![Texto alternativo](/database/code/knife_inspect.png)
+![Texto alternativo](/database/code/pistol_inspect.png)
+![Texto alternativo](/database/code/right_click_knife.png)
+![Texto alternativo](/database/code/right_click_spyke.png)
+
+
 ### Conclusão
 Este projeto fornece uma maneira prática e divertida de aprender os conceitos fundamentais da programação orientada a objetos. Com exemplos claros de herança, abstração, polimorfismo e encapsulamento, o código ajuda a entender como modelar o mundo real com objetos e interações, como em um jogo simples.
 
