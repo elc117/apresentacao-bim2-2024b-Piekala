@@ -23,7 +23,7 @@ public class Game {
         // O jogador começa com a pistola
         //player.change_weapon();
 
-        player.setAttacker(true).
+        player.setAttacker(true);
 
         // Menu de interação
         Scanner scanner = new Scanner(System.in);
