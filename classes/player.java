@@ -63,6 +63,10 @@ public class Player {
 
     }
 
+    public void setAttacker( boolean attacker ){
+        this.attacker = attacker;
+    }
+
     public void setLife( int life ){
         this.life = life;
     }

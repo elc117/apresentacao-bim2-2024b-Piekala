@@ -1,8 +1,6 @@
 import classes.Player;
 import classes.weapons.Knife;
 import classes.weapons.Pistol;
-import classes.weapons.Spyke;
-import classes.weapons.Weapon;
 
 import java.util.Scanner;
 
@@ -12,7 +10,7 @@ public class Game {
         
         // Criar um jogador
         Player player = new Player("Leo", true, new Knife(), new Pistol(), 0, null);
-        Player player2 = new Player("Fulano", true, new Knife(), new Pistol(), 25, null);
+        Player player2 = new Player("Fulano", false, new Knife(), new Pistol(), 25, null);
 
         // Exibe informações iniciais
         System.out.println("Bem-vindo, " + player.getName());
@@ -24,6 +22,8 @@ public class Game {
 
         // O jogador começa com a pistola
         //player.change_weapon();
+
+        player.setAttacker(true).
 
         // Menu de interação
         Scanner scanner = new Scanner(System.in);
