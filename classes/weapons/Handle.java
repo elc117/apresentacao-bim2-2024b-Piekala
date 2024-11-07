@@ -8,6 +8,10 @@ public abstract class Handle {
     
     public Handle(){}
 
+    public Handle( float weight ){
+        this.weight = weight;
+    }
+
     public abstract void left_click( Player player );
 
     public abstract void right_click( Player player );
