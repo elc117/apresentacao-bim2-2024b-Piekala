@@ -87,6 +87,10 @@ public class Player {
         this.shield = shield;
     }
 
+    public void setSpyke( boolean spyke ){
+        this.spyke = spyke;
+    }
+
     public int getShield(){
         return this.shield;
     }
@@ -118,6 +122,7 @@ public class Player {
     public void right_click( Player player ){
         this.handWeapon.right_click( player );
     }
+    
 
     public void change_weapon(){
 
