@@ -44,13 +44,13 @@ O código está estruturado em torno de classes e objetos. Vamos explorar alguns
 ### 1. Abstração
 A abstração é um dos pilares da programação orientada a objetos. Ela permite esconder os detalhes de implementação e mostrar apenas as funcionalidades essenciais.
 
-A classe `Handle` é abstrata e define métodos como `left_click()`, `right_click()`, e `inspect()` que devem ser implementados pelas classes que herdam dela (por exemplo, `Pistol`, `Knife`, `Spyke`).
+A classe `HandObject` é abstrata e define métodos como `left_click()`, `right_click()`, e `inspect()` que devem ser implementados pelas classes que herdam dela (por exemplo, `Pistol`, `Knife`, `Spyke`).
 
 **Exemplo de código:**
 
 ```java
-public abstract class Handle {
-    protected float weight; // Atributo protegido, acessível em classes que herdam Handle.
+public abstract class HandObject {
+    protected float weight; // Atributo protegido, acessível em classes que herdam HandObject.
 
     public abstract void left_click(Player player);
     public abstract void right_click(Player player);
@@ -59,13 +59,13 @@ public abstract class Handle {
 ```
 
 ### 2. Herança
-A herança permite que uma classe herde propriedades e métodos de outra classe. Aqui, a classe `Handle` é a superclasse de outras classes de armas como `Pistol`, `Knife` e `Spyke`. Essas classes herdam atributos e métodos da classe `Handle`, mas também podem ter comportamentos adicionais ou personalizados.
+A herança permite que uma classe herde propriedades e métodos de outra classe. Aqui, a classe `HandObject` é a superclasse de outras classes de armas como `Pistol`, `Knife` e `Spyke`. Essas classes herdam atributos e métodos da classe `HandObject`, mas também podem ter comportamentos adicionais ou personalizados.
 
 **Exemplo de código:**
 
 ```java
-public class Pistol extends Handle {
-    // A Pistol herda de Handle e pode sobrescrever os métodos.
+public class Pistol extends HandObject {
+    // A Pistol herda de HandObject e pode sobrescrever os métodos.
     @Override
     public void left_click(Player player) {
         // Comportamento da pistola ao clicar com o botão esquerdo.
@@ -91,7 +91,7 @@ O método `left_click()` é sobrescrito nas classes `Pistol`, `Knife`, e `Spyke`
 **Exemplo de código:**
 
 ```java
-public class Knife extends Handle {
+public class Knife extends HandObject {
     @Override
     public void left_click(Player player) {
         // A faca tem um comportamento específico ao ser clicada com o botão esquerdo
@@ -111,12 +111,12 @@ public class Knife extends Handle {
 ```
 
 ### 4. Atributos Protegidos
-Atributos protegidos são aqueles que podem ser acessados pelas classes que herdam a classe onde o atributo foi declarado. No exemplo, o atributo `weight` da classe `Handle` é protegido, o que permite que as subclasses como `Pistol`, `Knife`, etc., possam acessar e modificar esse valor.
+Atributos protegidos são aqueles que podem ser acessados pelas classes que herdam a classe onde o atributo foi declarado. No exemplo, o atributo `weight` da classe `HandObject` é protegido, o que permite que as subclasses como `Pistol`, `Knife`, etc., possam acessar e modificar esse valor.
 
 **Exemplo de código:**
 
 ```java
-public abstract class Handle {
+public abstract class HandObject {
     protected float weight; // Este atributo é acessível em classes filhas
 
     public abstract void left_click(Player player);
@@ -133,7 +133,7 @@ Os construtores são usados para inicializar objetos. No caso do `Pistol`, o con
 **Exemplo de código:**
 
 ```java
-public class Pistol extends Handle {
+public class Pistol extends HandObject {
     protected ArrayList<Integer> ammo;
     protected float weight;
     protected float weak_speed;

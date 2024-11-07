@@ -2,7 +2,7 @@ package classes.weapons;
 
 import classes.Player;
 
-public class Spyke extends Handle{
+public class Spyke extends HandObject{
 
     public Spyke(){}
 

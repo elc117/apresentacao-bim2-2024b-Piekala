@@ -1,7 +1,7 @@
 package classes.weapons;
 import java.util.ArrayList;
 
-public abstract class Weapon extends Handle{
+public abstract class Weapon extends HandObject{
 
     //attributes:
     protected ArrayList<Integer> ammo;

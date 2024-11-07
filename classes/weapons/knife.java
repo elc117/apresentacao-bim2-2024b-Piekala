@@ -1,7 +1,7 @@
 package classes.weapons;
 import classes.Player;
 
-public class Knife extends Handle{
+public class Knife extends HandObject{
     //attributes:
 
     protected float   weight;

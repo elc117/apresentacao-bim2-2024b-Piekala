@@ -2,13 +2,13 @@ package classes.weapons;
 import classes.Player;
 
 
-public abstract class Handle {
+public abstract class HandObject {
     
     protected float weight;
     
-    public Handle(){}
+    public HandObject(){}
 
-    public Handle( float weight ){
+    public HandObject( float weight ){
         this.weight = weight;
     }
 

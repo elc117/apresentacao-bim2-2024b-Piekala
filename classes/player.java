@@ -2,7 +2,7 @@ package classes;
 
 import java.util.Scanner;
 
-import classes.weapons.Handle;
+import classes.weapons.HandObject;
 import classes.weapons.Knife;
 import classes.weapons.Pistol;
 import classes.weapons.Spyke;
@@ -19,7 +19,7 @@ public class Player {
     private int     life;
     private int     shield;
 
-    private Handle  handWeapon;
+    private HandObject  handWeapon;
 
     private Knife   knife;
     private Pistol  pistol;
