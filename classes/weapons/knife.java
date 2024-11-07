@@ -49,13 +49,17 @@ public class Knife extends Handle{
        }
     }
 
+    @Override
     public void inspect(){
         System.out.println("Inspecionando faca.\n");
     }
     
+    @Override
     public void left_click( Player player ){
         fire( 75 , player );
     }
+
+    @Override
     public void right_click( Player player ){
         fire( 150 , player );
     }

@@ -9,19 +9,53 @@ import classes.weapons.Weapon;
 
 public class Player {
     
-    private int    id;
-    private String name;
+    private int     id;
+    private String  name;
+    private boolean attacker; 
 
-    private int    life;
-    private int    shield;
+    private int     life;
+    private int     shield;
 
-    private Handle handWeapon;
+    private Handle  handWeapon;
 
-    private Knife  knife;
-    private Pistol pistol;
-    private Weapon weapon;
+    private Knife   knife;
+    private Pistol  pistol;
+    private Weapon  weapon;
  
-    public Player(){
+    public Player( int id, String name, boolean attacker, Knife knife, Pistol pistol ){
+
+        this.id = id;
+        this.name = name;
+        this.attacker = attacker;
+
+        this.life = 100;
+        this.shield = 0;
+
+        this.knife = knife;
+        this.pistol = pistol;
+        this.weapon = null;
+        this.handWeapon = pistol;
+
+    }
+
+    public Player( int id, String name, boolean attacker, Knife knife, Pistol pistol, int shield, Weapon weapon ){
+
+        this.id = id;
+        this.name = name;
+        this.attacker = attacker;
+
+        this.life = 100;
+        this.shield = shield;
+
+        this.knife = knife;
+        this.pistol = pistol;
+        this.weapon = weapon;
+
+        if( weapon != null )
+            this.handWeapon = weapon;
+        
+        else
+            this.handWeapon = pistol;
 
     }
 

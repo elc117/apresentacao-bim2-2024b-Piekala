@@ -8,10 +8,10 @@ public abstract class Handle {
     
     public Handle(){}
 
-    public abstract void fire( Integer damage, Player player );
-
     public abstract void left_click( Player player );
 
     public abstract void right_click( Player player );
+
+    public abstract void inspect();
 
 }
