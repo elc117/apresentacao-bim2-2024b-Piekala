@@ -3,6 +3,8 @@
 ### Desenvolvedor
 **Nome:** [Leonardo Piekala]
 
+**Todos os direitos referentes ao jogo e imagem são pertencentes à Riot Games**
+
 Este projeto é uma abstração simples do jogo **VALORANT**, desenvolvido em Java. A proposta é criar uma simulação de interação entre um jogador e suas armas utilizando conceitos de Orientação a Objetos (OO) como **Herança**, **Abstração**, **Encapsulamento** e **Polimorfismo**.
 
 ---
