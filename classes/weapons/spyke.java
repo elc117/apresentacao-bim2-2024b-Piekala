@@ -30,12 +30,16 @@ public class Spyke extends Handle{
         }
     }
 
-    public void left_click(){
+    @Override
+    public void left_click( Player player ){
         plant();
     }
 
-    public void right_click(){
+    @Override
+    public void right_click( Player player ){
         defuse();
     }
+
+    public void inspect(){}
     
 }

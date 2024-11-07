@@ -5,12 +5,15 @@ import java.util.Scanner;
 import classes.weapons.Handle;
 import classes.weapons.Knife;
 import classes.weapons.Pistol;
+import classes.weapons.Spyke;
 import classes.weapons.Weapon;
 
 public class Player {
     
-    private int     id;
+    //private int     id;
     private String  name;
+
+    private boolean spyke;
     private boolean attacker; 
 
     private int     life;
@@ -22,9 +25,9 @@ public class Player {
     private Pistol  pistol;
     private Weapon  weapon;
  
-    public Player( int id, String name, boolean attacker, Knife knife, Pistol pistol ){
+    public Player( String name, boolean attacker, Knife knife, Pistol pistol ){
 
-        this.id = id;
+        //this.id = id;
         this.name = name;
         this.attacker = attacker;
 
@@ -38,18 +41,19 @@ public class Player {
 
     }
 
-    public Player( int id, String name, boolean attacker, Knife knife, Pistol pistol, int shield, Weapon weapon ){
+    public Player( String name, boolean attacker, Knife knife, Pistol pistol, int shield, Weapon weapon ){
 
-        this.id = id;
-        this.name = name;
+        //this.id = id;
+        this.name     = name;
         this.attacker = attacker;
-
-        this.life = 100;
-        this.shield = shield;
-
-        this.knife = knife;
-        this.pistol = pistol;
-        this.weapon = weapon;
+        
+        this.life     = 100;
+        this.shield   = shield;
+        
+        this.spyke    = false;
+        this.knife    = knife;
+        this.pistol   = pistol;
+        this.weapon   = weapon;
 
         if( weapon != null )
             this.handWeapon = weapon;
@@ -99,6 +103,10 @@ public class Player {
 
     }
 
+    public void inspect(){
+        this.handWeapon.inspect();
+    }
+
     public void left_click( Player player ){
         this.handWeapon.left_click( player );
     }
@@ -113,13 +121,17 @@ public class Player {
         int opc = 0;
         
         do{
+            
             if(weapon != null)
                 System.out.println("1) Arma Principal");
             
             if(pistol != null)
                 System.out.println("2) Pistola.\n");
 
-            System.out.println("1) Faca.\n");
+            System.out.println("3) Faca.\n");
+            
+            if(this.attacker && this.spyke)
+                System.out.println("4) Spyke");
 
             opc = Integer.parseInt(input.next());
 
@@ -135,10 +147,14 @@ public class Player {
                 this.handWeapon = this.weapon;
                 break;
             }
+            else if( opc == 4 && this.attacker && this.spyke ){
+                this.handWeapon = new Spyke();
+                break;
+            }
 
-        }while(true);
+        }while(false);
     
-        input.close();
+        //input.close();
     }
 
 }
