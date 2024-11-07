@@ -52,7 +52,7 @@ public class Pistol extends Handle{
 
     @Override
     public void inspect(){
-        System.out.println("Você está inspecionando essa pistola.");
+        System.out.println("Inspecionando pistola.");
     }
 
 }

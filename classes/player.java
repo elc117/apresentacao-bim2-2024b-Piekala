@@ -106,7 +106,7 @@ public class Player {
 
         if( this.life <= 0 ){
             this.life = 0;
-            System.out.println("O jogador " + this.name + "foi derrotado!");
+            System.out.println("O jogador " + this.name + " foi derrotado!");
         }
 
     }
