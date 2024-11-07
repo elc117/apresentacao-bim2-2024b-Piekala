@@ -56,6 +56,7 @@ public abstract class Handle {
     public abstract void right_click(Player player);
     public abstract void inspect(); // Métodos abstratos a serem implementados pelas subclasses.
 }
+```
 
 ### 2. Herança
 A herança permite que uma classe herde propriedades e métodos de outra classe. Aqui, a classe `Handle` é a superclasse de outras classes de armas como `Pistol`, `Knife` e `Spyke`. Essas classes herdam atributos e métodos da classe `Handle`, mas também podem ter comportamentos adicionais ou personalizados.
@@ -80,6 +81,7 @@ public class Pistol extends Handle {
         System.out.println("Inspecionando pistola.");
     }
 }
+```
 
 ### 3. Polimorfismo e Override
 O polimorfismo permite que objetos de diferentes classes sejam tratados como objetos de uma classe comum. Isso é útil quando você tem uma hierarquia de classes e quer garantir que um método tenha comportamentos diferentes dependendo do tipo de objeto.
@@ -106,6 +108,7 @@ public class Knife extends Handle {
         System.out.println("Inspecionando faca.");
     }
 }
+```
 
 ### 4. Atributos Protegidos
 Atributos protegidos são aqueles que podem ser acessados pelas classes que herdam a classe onde o atributo foi declarado. No exemplo, o atributo `weight` da classe `Handle` é protegido, o que permite que as subclasses como `Pistol`, `Knife`, etc., possam acessar e modificar esse valor.
@@ -120,6 +123,7 @@ public abstract class Handle {
     public abstract void right_click(Player player);
     public abstract void inspect();
 }
+```
 
 ### 5. Métodos e Construtores
 Os métodos são funções dentro das classes que definem os comportamentos dos objetos. Por exemplo, `left_click()`, `right_click()`, e `inspect()` são métodos que representam ações que podem ser realizadas com as armas.
@@ -158,6 +162,7 @@ public class Pistol extends Handle {
         System.out.println("Inspecionando pistola.");
     }
 }
+```
 
 
 ### 6. Encapsulamento
@@ -186,6 +191,7 @@ public class Player {
         this.shield = shield; // Método público para modificar o atributo 'shield'
     }
 }
+```
 
 ### Conclusão
 Este projeto fornece uma maneira prática e divertida de aprender os conceitos fundamentais da programação orientada a objetos. Com exemplos claros de herança, abstração, polimorfismo e encapsulamento, o código ajuda a entender como modelar o mundo real com objetos e interações, como em um jogo simples.
