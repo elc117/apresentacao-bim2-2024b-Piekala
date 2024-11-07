@@ -1,5 +1,5 @@
 package classes.weapons;
 
-public class spyke {
+public class spyke extends Handle{
     
 }
